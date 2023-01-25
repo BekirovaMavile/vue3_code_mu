@@ -2,18 +2,14 @@
 export default{
 data(){
   return{
-    arr: ['x', 'y', 'z'],
-    arr1: [1, 2, 3],
+    obj: {x: 1, y: 2, z: 3},
   }
 }
 }
 </script>
 
 <template>
-{{ arr[0] }}
-{{ arr[1] }}
-{{ arr[2] }}
-{{ arr1[0] + arr1[1] + arr1[2] }}
+{{ obj.x + obj.y + obj.z }}
 </template>
 
 <style scoped>
