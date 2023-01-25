@@ -1,15 +1,22 @@
 <script>
 export default{
-name: 'App',
+data(){
+  return{
+    name: 'Alec',
+    surname: 'Lightwood',
+  }
+}
 }
 </script>
 
 <template>
-  <div>Hello World</div>
+  <div>{{ name }}</div>
+  <div>{{ surname }}</div>
+  <!-- <div>Hello World</div> -->
 </template>
 
 <style scoped>
-header {
+/* header {
   line-height: 1.5;
 }
 
@@ -34,5 +41,5 @@ header {
     place-items: flex-start;
     flex-wrap: wrap;
   }
-}
+} */
 </style>
