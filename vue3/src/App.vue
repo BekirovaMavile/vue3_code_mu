@@ -12,7 +12,8 @@ methods: {
 </script>
 
 <template>
-{{ show() }}
+<button v-on:mouseover="show">mouse</button>
+<button @click="show">click</button>
 </template>
 
 <style scoped>
