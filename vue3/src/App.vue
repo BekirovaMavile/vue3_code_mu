@@ -2,18 +2,18 @@
 export default{
 data(){
   return{
-    num: 5,
-    num1: 1,
-    num2: 2,
-    num3: 3,
+    arr: ['x', 'y', 'z'],
+    arr1: [1, 2, 3],
   }
 }
 }
 </script>
 
 <template>
-{{ num * num }}
-{{ num1 + num2 + num3 }}
+{{ arr[0] }}
+{{ arr[1] }}
+{{ arr[2] }}
+{{ arr1[0] + arr1[1] + arr1[2] }}
 </template>
 
 <style scoped>
