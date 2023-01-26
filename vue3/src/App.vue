@@ -2,49 +2,26 @@
 export default{
 data(){
   return{
+    text: 'one hargreaves',
   }
 },
 methods: {
-  show: function(str){
-  alert(str*str);
-  },
-  show1: function(str1){
-    alert(str1*str1)
-  }
+  change: function(){
+    this.text = 'five hargreaves';
+},
+change2: function(){
+  this.text = 'two hargreaves'
+}
 }
 }
 </script>
 
 <template>
-<button @click="show(2)">btn1</button>
-<button @click="show1(3)">btn2</button>
+<p>{{ text }}</p>
+<button @click="change">text1</button>
+<button @click="change2">text2</button>
 </template>
 
 <style scoped>
-/* header {
-  line-height: 1.5;
-}
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-} */
 </style>
