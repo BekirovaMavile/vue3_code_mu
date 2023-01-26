@@ -2,13 +2,17 @@
 export default{
 data(){
   return{
-    num1: '1',
-    num2: '2',
+    date: '1'
   }
 },
 methods: {
   show: function(){
-    alert(this.num1 + this.num2);
+    let date = this.cape(this.date);
+    alert( WeekDay(date));
+  },
+  cape: function WeekDay(date){
+    let days = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье']
+    return days[date.getDay()];
   }
 }
 }
