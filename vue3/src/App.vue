@@ -2,25 +2,22 @@
 export default{
 data(){
   return{
-    date: '1'
   }
 },
 methods: {
-  show: function(){
-    let date = this.cape(this.date);
-    alert( WeekDay(date));
+  show: function(str){
+  alert(str*str);
   },
-  cape: function WeekDay(date){
-    let days = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье']
-    return days[date.getDay()];
+  show1: function(str1){
+    alert(str1*str1)
   }
 }
 }
 </script>
 
 <template>
-<button v-on:mouseover="show">mouse</button>
-<button @click="show">click</button>
+<button @click="show(2)">btn1</button>
+<button @click="show1(3)">btn2</button>
 </template>
 
 <style scoped>
