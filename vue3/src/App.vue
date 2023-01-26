@@ -1,21 +1,18 @@
 <script>
 export default{
 data(){
-  
-},
-methods: {
-  show: function(){
-    alert(new Date().toLocaleDateString());
+  return{
+    visible: true,
+    visible1: false,
   }
-}
+},
 }
 </script>
 
 <template>
-<a href="https://www.google.ru/" onclick="event.preventDefault()">Link</a>
-<br>
-<br>
-<button @click.once="show">click</button>
+<p v-if="visible">text</p>
+<p v-if="visible1">text</p>
+
 </template>
 
 <style scoped>
