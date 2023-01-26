@@ -11,7 +11,7 @@ data(){
 
 <template>
 <p v-if="visible">text</p>
-<p v-if="visible1">text</p>
+<p v-if="!visible1">text</p>
 
 </template>
 
