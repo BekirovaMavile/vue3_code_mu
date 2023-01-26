@@ -3,29 +3,31 @@ export default{
 data(){
   return{
     visible: true,
-btnHide: true,
-btnVis: false,
+    visible2: true,
+    visible3: true,
   }
 },
 methods: {
-  hide: function(){
-    this.visible = false;
-    this.btnHide = false;
-    this.btnVis = true;
+  toggle: function(){
+    this.visible = !this.visible;
   },
-  vis: function(){
-    this.visible = true;
-    this.btnHide = true;
-    this.btnVis = false;
+  toggle2: function () {
+    this.visible2 = !this.visible2;
+  },
+  toggle3: function () {
+    this.visible3 = !this.visible3;
   }
 }
 }
 </script>
 
 <template>
-<button @click="hide" v-if="btnHide">hide</button>
-<button @click="vis" v-if="btnVis">visible</button>
-<p v-if="visible">text</p>
+<button @click="toggle">toggle</button>
+<p v-if="visible">111</p>
+<button @click="toggle2">toggle</button>
+<p v-if="visible2">222</p>
+<button @click="toggle3">toggle</button>
+<p v-if="visible3">333</p>
 </template>
 
 <style scoped>
