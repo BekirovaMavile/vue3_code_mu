@@ -20,10 +20,10 @@ change: function(){
 </script>
 
 <template>
-<p>{{ cost }}</p>
-<p>{{ amount }}</p>
-<p>{{ price }}</p>
-<button @click="change">cost</button>
+<p class="hunter">{{ cost }}</p>
+<p class="hunter">{{ amount }}</p>
+<p class="hunter">{{ price }}</p>
+<button class="button" @click="change">cost</button>
 </template>
 
 <style scoped>
