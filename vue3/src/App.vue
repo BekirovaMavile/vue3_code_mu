@@ -7,12 +7,14 @@ data(){
 },
 methods: {
   show: function(){
-    let date = this.cape(this.date);
-    alert( WeekDay(date));
-  },
-  cape: function WeekDay(date){
+    // let date = this.cape(this.date);
+    const dayOfWeekDigit = new Date().getDay();
     let days = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье']
-    return days[date.getDay()];
+    alert(days[dayOfWeekDigit]);
+  },
+  cape: function(date){
+    let days = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье']
+    return days[date];
   }
 }
 }
