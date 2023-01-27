@@ -7,22 +7,33 @@ data(){
 },
 methods: {
   show: function(){
-    // let date = this.cape(this.date);
-    const dayOfWeekDigit = new Date().getDay();
-    let days = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье']
-    alert(days[dayOfWeekDigit]);
+    let date = this.dayOfWeek(this.date);
+    // const dayOfWeekDigit = new Date().getDay();
+    // let days = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье']
+    alert(date);
   },
-  cape: function(date){
+  dayOfWeek: function(date){
     let days = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье']
     return days[date];
-  }
+  },
+  main: function(){
+    const dayOfWeekDigit = new Date().getDay();
+    let days = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье']
+    return dayOfWeekDigit[days]
+  },
+  // dayOfWeek2: function (date) {
+  //   let days = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье']
+  //   return days[date];
+  // }
 }
 }
 </script>
 
 <template>
-<button v-on:mouseover="show">mouse</button>
+<!-- <button v-on:mouseover="show">mouse</button> -->
 <button @click="show">click</button>
+<button @click="main">click</button>
+{{ dayOfWeekDigit }}
 </template>
 
 <style scoped>
