@@ -31,8 +31,8 @@ methods: {
 
 <template>
 <!-- <button v-on:mouseover="show">mouse</button> -->
-<button @click="show">click</button>
-<button @click="main">click</button>
+<button class="button" @click="show">click</button>
+<button class="button" @click="main">click</button>
 {{ dayOfWeekDigit }}
 </template>
 
