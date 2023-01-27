@@ -22,12 +22,12 @@ methods: {
 </script>
 
 <template>
-<button @click="toggle">toggle</button>
-<p v-if="visible">111</p>
-<button @click="toggle2">toggle</button>
-<p v-if="visible2">222</p>
-<button @click="toggle3">toggle</button>
-<p v-if="visible3">333</p>
+<button class="button" @click="toggle">toggle</button>
+<p class="hunter" v-if="visible">Alec</p>
+<button class="button" @click="toggle2">toggle</button>
+<p class="hunter" v-if="visible2">Isabel</p>
+<button class="button" @click="toggle3">toggle</button>
+<p class="hunter" v-if="visible3">Magnus</p>
 </template>
 
 <style scoped>
