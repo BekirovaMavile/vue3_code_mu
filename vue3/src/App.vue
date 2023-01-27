@@ -23,9 +23,9 @@ methods: {
 </script>
 
 <template>
-<button @click="hide" v-if="btnHide">hide</button>
-<button @click="vis" v-if="btnVis">visible</button>
-<p v-if="visible">text</p>
+<button class="button" @click="hide" v-if="btnHide">hide</button>
+<button class="button" @click="vis" v-if="btnVis">visible</button>
+<p class="hunter" v-if="visible">text</p>
 </template>
 
 <style scoped>
