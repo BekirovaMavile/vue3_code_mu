@@ -10,7 +10,7 @@ data(){
 </script>
 
 <template>
-<a href="page.html">page</a>
+<a class="inline-link-3" href="page.html">page</a>
 </template>
 
 <style scoped>
