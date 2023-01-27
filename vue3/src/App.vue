@@ -2,19 +2,26 @@
 export default{
 data(){
   return{
-    num1: '1',
-    num2: '2',
+    num1: 1,
+    num2: 2,
+    text: 'alec'
   }
 },
 methods: {
   show: function(){
-    alert(this.num1 + this.num2);
+    let text = this.cape(this.text)
+    alert(text);
+    // alert(this.num1 + this.num2);
+  },
+  cape: function(str){
+    return str[0].toUpperCase() + str.slice(1);
   }
 }
 }
 </script>
 
 <template>
+  {{ text }}
 <button v-on:mouseover="show">mouse</button>
 <button @click="show">click</button>
 </template>
