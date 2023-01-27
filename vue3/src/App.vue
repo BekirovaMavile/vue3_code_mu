@@ -12,10 +12,10 @@ methods: {
 </script>
 
 <template>
-<a href="https://www.google.ru/" onclick="event.preventDefault()">Link</a>
+<a class="inline-link-1" href="https://www.google.ru/" onclick="event.preventDefault()">Link</a>
 <br>
 <br>
-<button @click.once="show">click</button>
+<button class="button" @click.once="show">click</button>
 </template>
 
 <style scoped>
