@@ -22,12 +22,12 @@ methods: {
 </script>
 
 <template>
-<button @click="toggle">toggle</button>
-{{visible ? 'hide' : 'show'}}
-<button @click="toggle1">toggle</button>
-{{visible1 ? 'hey' : 'bye'}}
-<button @click="toggle2">toggle</button>
-{{visible2 ? 'yes' : 'no'}}
+<button class="button" @click="toggle">toggle</button>
+<p class="hunter">{{visible ? 'Alec' : 'Lightwood'}}</p>
+<button class="button" @click="toggle1">toggle</button>
+<p class="hunter">{{visible1 ? 'Magnus' : 'Bane'}}</p>
+<button class="button" @click="toggle2">toggle</button>
+<p class="hunter">{{visible2 ? 'Jace' : 'Herondale'}}</p>
 </template>
 
 <style scoped>
