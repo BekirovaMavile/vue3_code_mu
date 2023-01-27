@@ -2,7 +2,7 @@
 export default{
 data(){
   return{
-    isAdmin: true,
+    isHunter: true,
   }
 },
 methods: {
@@ -12,8 +12,8 @@ methods: {
 </script>
 
 <template>
-<p v-if="isAdmin">Hey!!!</p>
-<p v-else>Admin false</p>
+<p class="hunter" v-if="isHunter">Alec Lightwood</p>
+<p class="hunter" v-else>Magnus Bane</p>
 </template>
 
 <style scoped>
