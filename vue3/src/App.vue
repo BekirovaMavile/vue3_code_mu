@@ -10,8 +10,8 @@ data(){
 </script>
 
 <template>
-<p v-if="visible">text</p>
-<p v-if="!visible1">text</p>
+<p class="hunter" v-if="visible">text</p>
+<p class="hunter" v-if="!visible1">text</p>
 
 </template>
 
