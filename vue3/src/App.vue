@@ -2,8 +2,7 @@
 export default{
 data(){
   return{
-    isValid: true,
-    isDisabled: true,
+
   }
 },
 methods: {
@@ -13,16 +12,10 @@ methods: {
 </script>
 
 <template>
-<p :class="{valid: isValid, disable: isDisabled}">Conclave</p>
+<p :style="{color: 'green', background: 'yellow'}">Shadowhunter</p>
+<p :style="{fontWeight: 'bold', fontStyle: 'italic'}">Conclave</p>
 </template>
 
 <style scoped>
-p.valid{
-padding: 10px;
-  margin: 10px;
-  background: #08C;
-  color: white;
-  font-weight: bold;
-  text-decoration: none;
-}
+
 </style>
