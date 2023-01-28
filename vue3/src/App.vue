@@ -5,15 +5,15 @@ data(){
     hrefs: [
       {
         href: '1.html',
-        text: 'text1',
+        text: 'Alec Lightwood',
       },
       {
         href: '2.html',
-        text: 'text2',
+        text: 'Isabel Lightwood',
       },
       {
         href: '3.html',
-        text: 'text3',
+        text: 'Max Lightwood',
       },
     ],
     products: [
@@ -42,12 +42,12 @@ methods: {
 </script>
 
 <template>
-  <ul>
+  <ul class="styled">
     <li v-for="link in hrefs"><a href="{{ link.href }}">{{ link.text }}</a></li>
   </ul>
   <br>
   <br>
-  <table>
+  <table class="hunter">
     <tr v-for="col in products">
       <td>{{ col.name }}</td>
       <td>{{ col.price }}</td>
