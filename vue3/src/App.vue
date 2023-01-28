@@ -2,24 +2,23 @@
 export default{
 data(){
   return{
-    hunter: ' ',
-    conclave: ' ',
+    checked: true,
+    visible: true,
   }
 },
 methods: {
-list: function(){
-
-  }
+  toggle: function () {
+    this.checked = false;
+    this.visible = !this.visible;
+  },
 }
 }
 </script>
 
 <template>
-<textarea class="text-field__input" v-model="hunter"></textarea>
-<p class="hunter">{{ hunter }}</p>
-<br>
-<textarea class="text-field__input" v-model="conclave"></textarea>
-<button class="button" @click="list">lists</button>
+<input class="text-field__input" type="checkbox" v-model="checked"> 
+<button class="button" @click="toggle">toggle</button>
+<p class="hunter" v-if="visible">{{ checked ? 'Alec' : 'Jace' }}</p>
 </template>
 
 <style scoped>
