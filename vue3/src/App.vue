@@ -2,7 +2,7 @@
 export default{
 data(){
   return{
-    arr: ['x', 'y', 'z'],
+    arr: ['Alec', 'Isabel', 'Max'],
   }
 },
 methods: {
@@ -12,7 +12,7 @@ methods: {
 </script>
 
 <template>
-  <ul v-for="(elem, key) in arr"> {{ key }} {{ elem }}</ul>
+  <ul class="hunter" v-for="(elem, key) in arr"> {{ key }} {{ elem }}</ul>
 </template>
 
 <style scoped>
