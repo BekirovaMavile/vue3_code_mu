@@ -2,35 +2,24 @@
 export default{
 data(){
   return{
-    num: 0,
-    res: 0,
-sum: 0,
-num1: 0, 
-num2: 0,
+    hunter: ' ',
+    conclave: ' ',
   }
 },
 methods: {
-  calc: function () {
-    this.res = Math.sqrt(this.num);
-  },
-  summary:function(){
-    this.sum = this.num1 + this.num2;
+list: function(){
+
   }
 }
 }
 </script>
 
 <template>
-  <p class="hunter">{{ res }}</p>
-  <input class="text-field__input" v-model="num">
-<button class="button" @click="calc">sqrt</button>
+<textarea class="text-field__input" v-model="hunter"></textarea>
+<p class="hunter">{{ hunter }}</p>
 <br>
-<p class="hunter">{{ sum }}</p>
-<input class="text-field__input" v-model=num1>
-<input class="text-field__input" v-model=num2>
-<button class="button" @click="summary">summary</button>
-<br>
-
+<textarea class="text-field__input" v-model="conclave"></textarea>
+<button class="button" @click="list">lists</button>
 </template>
 
 <style scoped>
