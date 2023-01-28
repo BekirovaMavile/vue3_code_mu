@@ -5,15 +5,15 @@ data(){
     products: [
       {
         id: 1,
-        name: 'product1',
+        name: 'Alec Lightwood',
       },
       {
         id: 2,
-        name: 'product2',
+        name: 'Isabel Lightwood',
       },
       {
         id: 3,
-        name: 'product3',
+        name: 'Max Lightwood',
       },
     ]
   }
@@ -25,7 +25,7 @@ methods: {
 </script>
 
 <template>
-  <p v-for="prod in products" :key='products.id'>{{ prod.name }}</p>
+  <p class="hunter" v-for="prod in products" :key='products.id'>{{ prod.name }}</p>
 </template>
 
 <style scoped>
