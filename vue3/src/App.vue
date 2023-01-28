@@ -2,7 +2,8 @@
 export default{
 data(){
   return{
-    
+    isValid: true,
+    isDisabled: true,
   }
 },
 methods: {
@@ -12,11 +13,11 @@ methods: {
 </script>
 
 <template>
-<p :class="{active: true, error: false}">Conclave</p>
+<p :class="{valid: isValid, disable: isDisabled}">Conclave</p>
 </template>
 
 <style scoped>
-p.active{
+p.valid{
 padding: 10px;
   margin: 10px;
   background: #08C;
