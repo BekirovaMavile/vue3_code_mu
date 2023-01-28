@@ -14,8 +14,8 @@ toggle: function(){
 </script>
 
 <template>
-  <button @click="toggle">toggle</button>
-  <p v-show="isAuth">+++</p>
+  <button class="button" @click="toggle">toggle</button>
+  <p class="hunter" v-show="isAuth">Alec Lightwood</p>
 </template>
 
 <style scoped>
