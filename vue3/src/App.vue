@@ -12,13 +12,13 @@ methods: {
 </script>
 
 <template>
-  <div v-for="elem in items">{{ elem }}</div>
+  <div class="hunter" v-for="elem in items">{{ elem }}</div>
   <br>
   <br>
-  <div v-for="elem in items">{{ elem*elem }}</div>
+  <div class="hunter" v-for="elem in items">{{ elem*elem }}</div>
   <br>
   <br>
-  <ul v-for="elem in items">{{ elem }}</ul>
+  <ul class="hunter" v-for="elem in items">{{ elem }}</ul>
 </template>
 
 <style scoped>
