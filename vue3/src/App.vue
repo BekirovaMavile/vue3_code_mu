@@ -12,7 +12,7 @@ methods: {
 </script>
 
 <template>
-  <p v-for="num in 30"> {{ num }}</p>
+  <p class="hunter" v-for="num in 30"> {{ num }}</p>
 </template>
 
 <style scoped>
