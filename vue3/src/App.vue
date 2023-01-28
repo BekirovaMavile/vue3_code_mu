@@ -13,12 +13,11 @@ methods: {
 
 <template>
   <div v-for="elem in items">
-  <p>{{ elem }}</p>
+  <p class="hunter">{{ elem }}</p>
   <p class="divider"> </p>
   </div>
   <br>
-  <br>
-  <ul v-for="elem in items">
+  <ul class="styled" v-for="elem in items">
     <li>{{ elem }}</li>
     <li class="divider"> </li>
   </ul>
