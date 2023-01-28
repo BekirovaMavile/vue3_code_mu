@@ -2,38 +2,27 @@
 export default{
 data(){
   return{
-    obj: {
-      done: true,
-      selected: false,
+    styles: {
+      hidden: true,
     },
   }
 },
 methods: {
-
+setDone:function(){
+  this.styles.hidden = false;
+}
 }
 }
 </script>
 
 <template>
-<p :class="selected">Shadowhunter</p>
-<p :class="obj">Conclave</p>
+<p class="hunter">Shadowhunter</p>
+<p :class="styles">Conclave</p>
+<button @click="setDone">hide</button>
 </template>
 
 <style scoped>
-.selected{
-  padding: 10px;
-    margin: 10px;
-    background: #08C;
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
-}
-.done {
-  padding: 10px;
-  margin: 10px;
-  background: #08C;
-  color: white;
-  font-weight: bold;
-  text-decoration: none;
+p.hidden{
+  display: none;
 }
 </style>
