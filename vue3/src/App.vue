@@ -14,11 +14,11 @@ hide: function(){
 </script>
 
 <template>
-  <button @click="hide">hide</button>
+  <button class="button" @click="hide">hide</button>
   <div v-if="hidden">
-  <p>+++</p>
-  <p>+++</p>
-  <p>+++</p>
+  <p class="hunter">+++</p>
+  <p class="hunter">+++</p>
+  <p class="hunter">+++</p>
   </div>
 </template>
 
