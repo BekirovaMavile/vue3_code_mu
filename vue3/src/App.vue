@@ -2,7 +2,10 @@
 export default{
 data(){
   return{
-    cssClass: 'hunt night',
+    obj: {
+      done: true,
+      selected: false,
+    },
   }
 },
 methods: {
@@ -12,16 +15,25 @@ methods: {
 </script>
 
 <template>
-<p :class="cssClass">Shadowhunter</p>
+<p :class="selected">Shadowhunter</p>
+<p :class="obj">Conclave</p>
 </template>
 
 <style scoped>
-.hunt{
+.selected{
   padding: 10px;
     margin: 10px;
     background: #08C;
     color: white;
     font-weight: bold;
     text-decoration: none;
+}
+.done {
+  padding: 10px;
+  margin: 10px;
+  background: #08C;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
 }
 </style>
