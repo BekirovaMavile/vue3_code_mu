@@ -13,7 +13,7 @@ methods: {
 </script>
 
 <template>
-  <ul>
+  <ul class="styled">
     <template v-for="elem in arr">
     <li v-if="elem > 0 ">{{ elem }}</li>
     </template>
