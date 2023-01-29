@@ -21,22 +21,52 @@ data(){
         salary: 300,
         age: 25,
       },
-    ],
+    ]
   }
 },
 methods: {
-  removeHunter: function (id) {
-    this.hunters = this.hunters.filter((hunter) => {
-      return hunter.id !== id;
-    })
-  }
+  edit(hunter) {
+    hunter.isEdit = true;
+  },
+  save(hunter) {
+    hunter.isEdit = false;
+  },
 }
 }
 </script>
 
 <template>
+  <!-- <ul>
+    <li v-for="user in users" :key="user.id">
+<template v-if="!user.isEdit">
+  {{ user.name }}
+  {{ user.surn }}
+  <button @click="edit(user)">
+    edit
+  </button>
+</template>
+<template v-else>
+  <input v-model="user.name">
+  <input v-model="user.surn">
+  <button @click="save(user)">
+    save
+  </button>
+</template>
+    </li>
+  </ul> -->
 <table class="hunter">
-  <tr v-for="hunter in hunters" :key="hunter.id"> {{ hunter.name }} {{ hunter.salary }} {{ hunter.age }} <button class="button" @click="removeHunter(hunters.id)">remove</button>
+<tr v-for="hunter in hunters" :key="hunter.id"> 
+<template v-if="!hunter.isEdit">
+  {{ hunter.name }} {{ hunter.salary }} {{ hunter.age }}<button class="button" @click="edit(hunter)">edit</button>
+</template>
+<template v-else>
+  <input v-model="hunter.name">
+  <input v-model="hunter.salary">
+  <input v-model="hunter.age">
+  <button class="button" @click="save(hunter)">
+      save
+  </button>
+</template>
 </tr>
 </table>
 </template>
