@@ -2,28 +2,43 @@
 export default{
 data(){
   return{
-    newHunter: '',
-    hunters: ['Alec', 'Clary', 'Max', 'Isabel', 'Helen'],
+    hunters: [
+      {
+        id: 1,
+        name: 'Alec Lightwood',
+        salary: 100,
+        age: 19,
+      },
+      {
+        id: 2,
+        name: 'Jace Herondale',
+        salary: 200,
+        age: 18,
+      },
+      {
+        id: 3,
+        name: 'Magnus Bane',
+        salary: 300,
+        age: 25,
+      },
+    ],
   }
 },
 methods: {
-  addHunter: function () {
-    this.hunters.unshift(this.newHunter);
+  removeHunter: function (id) {
+    this.hunters = this.hunters.filter((hunter) => {
+      return hunter.id !== id;
+    })
   }
 }
 }
 </script>
 
 <template>
-<ul class="styled">
-  <li v-for="(hunter, index) in 
-			hunters" :key="index">
-    {{ hunter }}
-  </li>
-</ul>
-<input class="text-field__input" v-model="newHunter">
-<br>
-<button class="button" @click="addHunter">add</button>
+<table class="hunter">
+  <tr v-for="hunter in hunters" :key="hunter.id"> {{ hunter.name }} {{ hunter.salary }} {{ hunter.age }} <button class="button" @click="removeHunter(hunters.id)">remove</button>
+</tr>
+</table>
 </template>
 
 <style scoped>
