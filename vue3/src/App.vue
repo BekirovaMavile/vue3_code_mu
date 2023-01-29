@@ -2,33 +2,22 @@
 export default{
 data(){
   return{
-    isDisabled: true,
-    isDisabled1: true,
-    checked: false,
+  hunter: ' ',
+  hunters: ' '
   }
 },
 methods: {
-  toggle: function () {
-    this.isDisabled = false;
-  },
-  toggle1: function () {
-    this.isDisabled1 = false;
-  },
+  // vm.submit()
 }
 }
 </script>
 
 <template>
-<input type="text" class="text-field__input" placeholder="shadowhunter" v-bind:disabled="isDisabled">
+<input class="text-field__input" v-model="hunter" v-on:keyup.enter="submit">
+<p>{{ hunter }}</p>
 <br>
-<button class="button" @click="toggle">btn</button>
-<br>
-<br>
-<br>
-<input type="text" class="text-field__input" placeholder="shadowhunter" v-bind:disabled="isDisabled1">
-<br>
-<input type="checkbox" v-model="checked" @click="toggle1">
-<!-- <button class="button" @click="toggle">btn</button> -->
+<a href="#" class="inline-link-1" v-on:keyup.ctrl="sub">Conclave</a>
+<p ></p>
 </template>
 
 <style scoped>
