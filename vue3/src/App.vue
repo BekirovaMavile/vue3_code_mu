@@ -2,7 +2,7 @@
 export default{
 data(){
   return{
-    lang: [],
+    language: '',
   }
 },
 methods: {
@@ -13,18 +13,22 @@ methods: {
 
 <template>
   <div class="hunter">
-<input class="hunter" type="checkbox" v-model="lang" value="js">
-<label>JS</label>
+    <p>Какой язык ваш родной?</p>
+<input name="radio" type="radio" v-model="language" value="Крымскотатарский">
+<label for="">Крымскотатарский</label>
 <br>
-<input class="hunter" type="checkbox" v-model="lang" value="c++">
-<label>C++</label>
+<input name="radio" type="radio" v-model="language" value="Русский">
+<label for="">Русский</label>
 <br>
-<input class="hunter" type="checkbox" v-model="lang" value="java">
-<label>java</label>
-<ol>
-  <li v-for="elem in lang">{{ elem }}</li>
-</ol>
+<input name="radio" type="radio" v-model="language" value="Испанский">
+<label for="">Испанский</label>
 </div>
+<!-- <p v-if="value === 'Крымскотатарский'">Хош кельдинъиз</p>
+<p v-else-if="value === 'Русский'">Добро пожаловать</p>
+<p v-else-if="value === 'Испанский'">Bienvenido</p>
+<p v-else=''> </p> -->
+
+<p>Ваш выбор: {{ language }}</p>
 <br>
 </template>
 
