@@ -7,22 +7,22 @@ data(){
   }
 },
 methods: {
-  addHunter: function () {
-    this.hunters.unshift(this.newHunter);
+  removeHunter: function (index) {
+    this.hunters.splice(index, 1);
   }
 }
 }
 </script>
 
 <template>
-<ul>
+<ul class="styled">
   <li v-for="(hunter, index) in 
 			hunters" :key="index">
     {{ hunter }}
+    <br>
+    <button class="button" @click="removeHunter(index)">remove</button>
   </li>
 </ul>
-<input v-model="newHunter">
-<button @click="addHunter">add</button>
 </template>
 
 <style scoped>
