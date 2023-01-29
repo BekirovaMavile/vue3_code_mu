@@ -1,40 +1,30 @@
 <script>
 import Hunter from './components/Employee.vue'
 
+
 export default {
   data() {
     return {
-      hunters: [
-        {
-          id: 1,
-          name: 'Alec',
-          salary: 1000,
-          age: 19
-        },
-        {
-          id: 2,
-          name: 'Jace',
-          salary: 1000,
-          age: 18
-        },
-        {
-          id: 3,
-          name: 'Magnus',
-          salary: 3000,
-          age: 25
-        },
-      ],
+      
     }
   },
   components: {
     Hunter
+  },
+  methods: {
+    lightwood() {
+      alert('Alec, Isabel, Gideon, Gabriel');
+    },
+    herondale(){
+      alert('Jace, Will, Tessa, Lucy')
+    }
   }
 }
 
 </script>
 
 <template>
-<Hunter v-for="hunter in hunters" :name="hunter.name" :salary="hunter.salary" :age="hunter.age" :key="hunter.id" />
+<Hunter @show="lightwood" @show1="herondale" />
 </template>
 
 
