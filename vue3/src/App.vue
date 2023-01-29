@@ -2,22 +2,27 @@
 export default{
 data(){
   return{
-  hunter: ' ',
-  hunters: ' '
+    newHunter: '',
+    hunters: ['Alec', 'Clary', 'Max', 'Isabel', 'Helen'],
   }
 },
 methods: {
-  // vm.submit()
+  addHunter: function () {
+    this.hunters.unshift(this.newHunter);
+  }
 }
 }
 </script>
 
 <template>
-<input class="text-field__input" v-model="hunter" v-on:keyup.enter="submit">
-<p>{{ hunter }}</p>
-<br>
-<a href="#" class="inline-link-1" v-on:keyup.ctrl="sub">Conclave</a>
-<p ></p>
+<ul>
+  <li v-for="(hunter, index) in 
+			hunters" :key="index">
+    {{ hunter }}
+  </li>
+</ul>
+<input v-model="newHunter">
+<button @click="addHunter">add</button>
 </template>
 
 <style scoped>
