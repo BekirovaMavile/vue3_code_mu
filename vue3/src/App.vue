@@ -15,14 +15,15 @@ methods: {
 </script>
 
 <template>
-<ul>
+<ul class="styled">
   <li v-for="(hunter, index) in 
 			hunters" :key="index">
     {{ hunter }}
   </li>
 </ul>
-<input v-model="newHunter">
-<button @click="addHunter">add</button>
+<input class="text-field__input" v-model="newHunter">
+<br>
+<button class="button" @click="addHunter">add</button>
 </template>
 
 <style scoped>
