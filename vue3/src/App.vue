@@ -9,8 +9,9 @@ export default {
 </script>
 
 <template>
-<Hunter name="Alec" surn="Lightwood" age="19"/>
+<Hunter :name="['Alec', 'Clary', 'Jace', 'Isabel', 'Magnus', 'Rafael']"/>
 </template>
+
 
 <style scoped>
 

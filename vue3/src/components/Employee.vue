@@ -1,6 +1,6 @@
 <script>
 export default {
-    props: ['name', 'surn', 'age'],
+    props: ['name'],
     data() {
         return {
 
@@ -10,7 +10,7 @@ export default {
 </script>
 
 <template>
-   <p class="hunter">{{ name }}</p>
-   <p class="hunter">{{ surn }}</p>
-   <p class="hunter">{{ age }}</p>
+<ul class="styled">
+    <li v-for="hunter in name">{{ hunter }}</li>
+</ul>
 </template>
