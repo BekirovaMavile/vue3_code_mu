@@ -2,14 +2,22 @@
 import Hunter from './components/Employee.vue'
 
 export default {
+  data() {
+    return {
+      name: 'Alec Lightwood',
+      salary: '1000',
+      age: '19',
+    }
+  },
   components: {
     Hunter
   }
 }
+
 </script>
 
 <template>
-<Hunter :name="['Alec', 'Clary', 'Jace', 'Isabel', 'Magnus', 'Rafael']"/>
+<Hunter :name="name" :salary="salary" :age="age"/>
 </template>
 
 
