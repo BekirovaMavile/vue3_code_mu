@@ -9,7 +9,7 @@ export default {
 </script>
 
 <template>
-<Hunter />
+<Hunter name="Alec" surn="Lightwood" age="19"/>
 </template>
 
 <style scoped>
