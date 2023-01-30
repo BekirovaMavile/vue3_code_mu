@@ -15,16 +15,13 @@ export default {
     hunterName(name) {
       console.log(name);
     },
-    hunterSalary(name, salary){
-console.log(name, salary);
-    }
   }
 }
 
 </script>
 
 <template>
-<Hunter @show="hunterName" @show1="hunterSalary"/>
+<Hunter @show="hunterName"/>
 </template>
 
 
