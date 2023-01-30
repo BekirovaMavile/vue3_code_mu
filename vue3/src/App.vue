@@ -1,5 +1,6 @@
 <script>
 import Hunter from './components/Employee.vue'
+import HunterForm from './components/HunterForm.vue'
 
 
 export default {
@@ -26,16 +27,13 @@ export default {
     }
   },
   components: {
-    Hunter
+    Hunter, HunterForm
   },
   methods: {
-    change(id, name, surn){
-      this.hunters = this.hunters.map((hunter) => {
-        if(hunter.id === id){
-          hunter.name = name;
-          hunter.surn = surn;
-        }
-        return hunter;
+    add(name, surn){
+      let id = this.hunters.length + 1;
+      this.hunters.push({
+        id, name, surn
       });
     }
   }
@@ -44,12 +42,7 @@ export default {
 </script>
 
 <template>
-<Hunter v-for   ="hunter in hunters"
-		:id     ="hunter.id"
-		:name   ="hunter.name"
-		:surn   ="hunter.surn"
-		:key    ="hunter.id"
-    @change="change"/>
+<HunterForm @add="add"/>
 </template>
 
 
