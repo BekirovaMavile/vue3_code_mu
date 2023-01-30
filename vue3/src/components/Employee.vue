@@ -7,17 +7,17 @@ export default {
         }
     },
     methods: {
-        handle() {
-            this.$emit('show');
+        handleName() {
+            this.$emit('show', 'Alec Lightwood');
         },
-        handle1() {
-            this.$emit('show1');
-        },
+        handleSalary(){
+            this.$emit('show1', 'Jace Herondale', '20000');
+        }
     }
 }
 </script>
 
 <template>
-<button class="button" @click="handle">Lightwoods</button>
-<button class="button" @click="handle1">Herondales</button>
+<button class="button" @click="handleName">Name</button>
+<button class="button" @click="handleSalary">Salary</button>
 </template>

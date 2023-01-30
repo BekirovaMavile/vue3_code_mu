@@ -12,11 +12,11 @@ export default {
     Hunter
   },
   methods: {
-    lightwood() {
-      alert('Alec, Isabel, Gideon, Gabriel');
+    hunterName(name) {
+      console.log(name);
     },
-    herondale(){
-      alert('Jace, Will, Tessa, Lucy')
+    hunterSalary(name, salary){
+console.log(name, salary);
     }
   }
 }
@@ -24,7 +24,7 @@ export default {
 </script>
 
 <template>
-<Hunter @show="lightwood" @show1="herondale" />
+<Hunter @show="hunterName" @show1="hunterSalary"/>
 </template>
 
 
